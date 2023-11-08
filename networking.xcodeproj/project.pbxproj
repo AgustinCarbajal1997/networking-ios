@@ -16,6 +16,7 @@
 		9F9FC9D22AFC39250097170B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9FC9D02AFC39250097170B /* LaunchScreen.storyboard */; };
 		9F9FC9DB2AFC3AA70097170B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F9FC9DA2AFC3AA70097170B /* Alamofire */; };
 		9F9FC9DD2AFC3AF70097170B /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */; };
+		9F9FC9E12AFC3D190097170B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9E02AFC3D190097170B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		9F9FC9D12AFC39250097170B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F9FC9D32AFC39250097170B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		9F9FC9E02AFC3D190097170B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		9F9FC9C12AFC39230097170B /* networking */ = {
 			isa = PBXGroup;
 			children = (
+				9F9FC9DE2AFC3CBB0097170B /* Network */,
 				9F9FC9C22AFC39230097170B /* AppDelegate.swift */,
 				9F9FC9C42AFC39230097170B /* SceneDelegate.swift */,
 				9F9FC9C62AFC39230097170B /* ViewController.swift */,
@@ -70,9 +73,25 @@
 				9F9FC9D02AFC39250097170B /* LaunchScreen.storyboard */,
 				9F9FC9D32AFC39250097170B /* Info.plist */,
 				9F9FC9CB2AFC39230097170B /* networking.xcdatamodeld */,
-				9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */,
 			);
 			path = networking;
+			sourceTree = "<group>";
+		};
+		9F9FC9DE2AFC3CBB0097170B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9F9FC9DF2AFC3CE30097170B /* Data */,
+				9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9F9FC9DF2AFC3CE30097170B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9F9FC9E02AFC3D190097170B /* User.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +173,7 @@
 			files = (
 				9F9FC9C72AFC39230097170B /* ViewController.swift in Sources */,
 				9F9FC9C32AFC39230097170B /* AppDelegate.swift in Sources */,
+				9F9FC9E12AFC3D190097170B /* User.swift in Sources */,
 				9F9FC9C52AFC39230097170B /* SceneDelegate.swift in Sources */,
 				9F9FC9DD2AFC3AF70097170B /* NetworkingProvider.swift in Sources */,
 				9F9FC9CD2AFC39230097170B /* networking.xcdatamodeld in Sources */,
