@@ -24,15 +24,33 @@
                                     <action selector="getUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XQR-ak-wUL"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="bEA-xa-f0T">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjf-BN-FwY">
+                                <rect key="frame" x="16" y="126" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jjf-BN-FwY" firstAttribute="top" secondItem="w3n-KP-fiM" secondAttribute="bottom" constant="16" id="BOz-sA-sMf"/>
                             <constraint firstItem="w3n-KP-fiM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DHg-6S-en3"/>
+                            <constraint firstItem="bEA-xa-f0T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MfS-qK-Hi0"/>
+                            <constraint firstItem="Jjf-BN-FwY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O1l-wp-Raf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jjf-BN-FwY" secondAttribute="trailing" constant="16" id="OTR-pL-d57"/>
+                            <constraint firstItem="bEA-xa-f0T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TcV-TK-uvt"/>
                             <constraint firstItem="w3n-KP-fiM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mV2-La-nL9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w3n-KP-fiM" secondAttribute="trailing" constant="16" id="uV6-BH-6a0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="bEA-xa-f0T" id="lcy-BY-qQr"/>
+                        <outlet property="nameUser" destination="Jjf-BN-FwY" id="U6D-Aj-6fn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
