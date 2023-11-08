@@ -16,7 +16,7 @@ import Foundation
 //}
 
 // para representar valores que pueden ser null lo hacemos con el "?"
-
+// decodable transforma un JSON a objeto swift
 struct UserResponse: Decodable {
     let id: Int
     let name: String

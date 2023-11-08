@@ -42,4 +42,19 @@ final class NetworkingProvider {
         
     }
     
+    func addUser(user: NewUser, success: @escaping (_ user:  UserResponse) -> (), failure: @escaping (_ error: Error?)->()){
+        
+        AF.request("\(kBaseUrl)", method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: kStatusOk).responseDecodable(of: UserResponse.self){
+            response in
+
+            if let user = response.value {
+                print("Este es el usuario", user.email)
+                success(user)
+            } else {
+                print("Respuesta incorrecta", response.error?.responseCode ?? "No error code")
+                failure(response.error)
+            }
+        }
+    }
+    
 }

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+// codable transforma un objeto swift a JSON
+struct NewUser: Encodable {
+    let name: String
+    let email: String
+    let gender: String
+    let status: String
+}

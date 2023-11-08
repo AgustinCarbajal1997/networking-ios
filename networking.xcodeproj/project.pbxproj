@@ -18,6 +18,7 @@
 		9F9FC9DD2AFC3AF70097170B /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */; };
 		9F9FC9E12AFC3D190097170B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9E02AFC3D190097170B /* User.swift */; };
 		9F9FC9E42AFC450E0097170B /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9E32AFC450E0097170B /* DataDecoder.swift */; };
+		9F9FC9E62AFC4F100097170B /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9E52AFC4F100097170B /* NewUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		9F9FC9E02AFC3D190097170B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F9FC9E32AFC450E0097170B /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		9F9FC9E52AFC4F100097170B /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9FC9E02AFC3D190097170B /* User.swift */,
+				9F9FC9E52AFC4F100097170B /* NewUser.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9FC9C72AFC39230097170B /* ViewController.swift in Sources */,
+				9F9FC9E62AFC4F100097170B /* NewUser.swift in Sources */,
 				9F9FC9E42AFC450E0097170B /* DataDecoder.swift in Sources */,
 				9F9FC9C32AFC39230097170B /* AppDelegate.swift in Sources */,
 				9F9FC9E12AFC3D190097170B /* User.swift in Sources */,
