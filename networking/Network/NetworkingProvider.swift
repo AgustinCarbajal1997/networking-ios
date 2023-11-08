@@ -17,15 +17,26 @@ final class NetworkingProvider {
     
     func getUser(id: Int) {
         
-        AF.request("\(kBaseUrl)\(id)", method: .get).validate(statusCode: kStatusOk).responseDecodable(of: UserResponse.self){
+//        AF.request("\(kBaseUrl)\(id)", method: .get).validate(statusCode: kStatusOk).responseDecodable(of: UserResponse.self){
+//            response in
+//
+//            if let user = response.value {
+//                print("Este es el usuario", user.email)
+//            } else {
+//                print("Respuesta incorrecta", response.error?.responseCode ?? "No error code")
+//            }
+//        }
+        
+        AF.request("https://gorest.co.in/public/v2/todos/33660", method: .get).validate(statusCode: kStatusOk).responseDecodable(of: Todos.self, decoder: DataDecoder()){
             response in
             
-            if let user = response.value {
-                print("Este es el usuario", user.email)
+            if let todo = response.value {
+                print("Este es el todo", todo.dueOn!)
             } else {
                 print("Respuesta incorrecta", response.error?.responseCode ?? "No error code")
             }
         }
+        
     }
     
 }
