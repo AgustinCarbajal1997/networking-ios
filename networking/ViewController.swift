@@ -35,5 +35,19 @@ class ViewController: UIViewController {
         }
 
     }
+    
+    @IBAction func addUser(_ sender: Any) {
+        activityIndicator.startAnimating()
+        let newUser = NewUser(name: "Agustin", email: "carbajal123123@gmail.com", gender: "male", status: "Inactive")
+        NetworkingProvider.shared.addUser(user: newUser) { user in
+            self.activityIndicator.stopAnimating()
+            self.nameUser.text = user.name
+            self.idUser.text = user.id.description
+        } failure: { error in
+            self.activityIndicator.stopAnimating()
+            self.nameUser.text = error.debugDescription
+        }
+    }
+    
 }
 

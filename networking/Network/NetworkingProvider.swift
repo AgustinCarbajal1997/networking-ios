@@ -14,6 +14,7 @@ final class NetworkingProvider {
     
     private let kBaseUrl: String = "https://gorest.co.in/public/v2/users/"
     private let kStatusOk = 200...299
+    private let kToken = "c982db5bf2337421d45cb2185f51a0f7cf1f38519e3cc98b4f614420aa951f1f"
     
     // @escaping significa que en un momento futuro puedo llamar ese callback
     func getUser(id: Int, success: @escaping (_ user:  UserResponse) -> (), failure: @escaping (_ error: Error?)->()) {
@@ -44,14 +45,16 @@ final class NetworkingProvider {
     
     func addUser(user: NewUser, success: @escaping (_ user:  UserResponse) -> (), failure: @escaping (_ error: Error?)->()){
         
-        AF.request("\(kBaseUrl)", method: .post, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: kStatusOk).responseDecodable(of: UserResponse.self){
+        let headers:HTTPHeaders = [.authorization(bearerToken: kToken)]
+        
+        AF.request("\(kBaseUrl)", method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: headers).validate(statusCode: kStatusOk).responseDecodable(of: UserResponse.self){
             response in
 
             if let user = response.value {
                 print("Este es el usuario", user.email)
                 success(user)
             } else {
-                print("Respuesta incorrecta", response.error?.responseCode ?? "No error code")
+                print("Respuesta incorrecta", response.error ?? "No error")
                 failure(response.error)
             }
         }
