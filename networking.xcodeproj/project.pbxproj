@@ -14,6 +14,8 @@
 		9F9FC9CD2AFC39230097170B /* networking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9CB2AFC39230097170B /* networking.xcdatamodeld */; };
 		9F9FC9CF2AFC39250097170B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9FC9CE2AFC39250097170B /* Assets.xcassets */; };
 		9F9FC9D22AFC39250097170B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9FC9D02AFC39250097170B /* LaunchScreen.storyboard */; };
+		9F9FC9DB2AFC3AA70097170B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F9FC9DA2AFC3AA70097170B /* Alamofire */; };
+		9F9FC9DD2AFC3AF70097170B /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		9F9FC9CE2AFC39250097170B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F9FC9D12AFC39250097170B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F9FC9D32AFC39250097170B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9FC9DB2AFC3AA70097170B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +70,7 @@
 				9F9FC9D02AFC39250097170B /* LaunchScreen.storyboard */,
 				9F9FC9D32AFC39250097170B /* Info.plist */,
 				9F9FC9CB2AFC39230097170B /* networking.xcdatamodeld */,
+				9F9FC9DC2AFC3AF70097170B /* NetworkingProvider.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = networking;
+			packageProductDependencies = (
+				9F9FC9DA2AFC3AA70097170B /* Alamofire */,
+			);
 			productName = networking;
 			productReference = 9F9FC9BF2AFC39230097170B /* networking.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 9F9FC9B62AFC39230097170B;
+			packageReferences = (
+				9F9FC9D92AFC3AA70097170B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9F9FC9C02AFC39230097170B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +155,7 @@
 				9F9FC9C72AFC39230097170B /* ViewController.swift in Sources */,
 				9F9FC9C32AFC39230097170B /* AppDelegate.swift in Sources */,
 				9F9FC9C52AFC39230097170B /* SceneDelegate.swift in Sources */,
+				9F9FC9DD2AFC3AF70097170B /* NetworkingProvider.swift in Sources */,
 				9F9FC9CD2AFC39230097170B /* networking.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F9FC9D92AFC3AA70097170B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F9FC9DA2AFC3AA70097170B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F9FC9D92AFC3AA70097170B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9F9FC9CB2AFC39230097170B /* networking.xcdatamodeld */ = {
