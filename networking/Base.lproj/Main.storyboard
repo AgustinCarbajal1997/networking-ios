@@ -47,6 +47,14 @@
                                     <action selector="addUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Px1-sx-Yv7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgv-p5-n8M">
+                                <rect key="frame" x="16" y="251" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UPDATE user"/>
+                                <connections>
+                                    <action selector="updateUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="usg-IY-xIi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,10 +69,13 @@
                             <constraint firstItem="bEA-xa-f0T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TcV-TK-uvt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qgT-t9-PIQ" secondAttribute="trailing" constant="16" id="W2P-V3-2Pg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cd7-eE-v8J" secondAttribute="trailing" constant="16" id="ZhO-eL-sFe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tgv-p5-n8M" secondAttribute="trailing" constant="16" id="afd-mi-Q5u"/>
                             <constraint firstItem="cd7-eE-v8J" firstAttribute="top" secondItem="Jjf-BN-FwY" secondAttribute="bottom" constant="16" id="ivv-2r-Hgb"/>
+                            <constraint firstItem="tgv-p5-n8M" firstAttribute="top" secondItem="qgT-t9-PIQ" secondAttribute="bottom" constant="16" id="lhw-uc-bZq"/>
                             <constraint firstItem="w3n-KP-fiM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mV2-La-nL9"/>
                             <constraint firstItem="cd7-eE-v8J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p9k-DU-QG0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w3n-KP-fiM" secondAttribute="trailing" constant="16" id="uV6-BH-6a0"/>
+                            <constraint firstItem="tgv-p5-n8M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yBF-er-fvb"/>
                         </constraints>
                     </view>
                     <connections>

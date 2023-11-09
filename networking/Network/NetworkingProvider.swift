@@ -60,4 +60,21 @@ final class NetworkingProvider {
         }
     }
     
+    func updateUser(id: Int, user: NewUser, success: @escaping (_ user:  UserResponse) -> (), failure: @escaping (_ error: Error?)->()){
+        
+        let headers:HTTPHeaders = [.authorization(bearerToken: kToken)]
+        
+        AF.request("\(kBaseUrl)\(id)", method: .put, parameters: user, encoder: JSONParameterEncoder.default, headers: headers).validate(statusCode: kStatusOk).responseDecodable(of: UserResponse.self){
+            response in
+
+            if let user = response.value {
+                print("Este es el usuario", user.email)
+                success(user)
+            } else {
+                print("Respuesta incorrecta", response.error ?? "No error")
+                failure(response.error)
+            }
+        }
+    }
+    
 }
