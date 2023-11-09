@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameUser: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var idUser: UILabel!
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var downloadImageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,5 +78,12 @@ class ViewController: UIViewController {
             self.nameUser.text = error.debugDescription
         }
     }
+    
+    
+    @IBAction func downloadImageAction(_ sender: Any) {
+        downloadImageButton.isHidden = true
+        logoImage.kf.setImage(with: URL(string: "https://images0.autocasion.com/unsafe/900x600/actualidad/wp-content/uploads/2015/12/_main_image_209701_5664c7bd92cd1.jpg"))
+    }
+    
 }
 

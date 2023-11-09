@@ -63,18 +63,37 @@
                                     <action selector="deleteUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXs-8D-NUc"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXe-vT-csr">
+                                <rect key="frame" x="96.666666666666686" y="353" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="TaF-uM-h37"/>
+                                    <constraint firstAttribute="height" constant="200" id="j68-IG-3EO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54b-rs-L3N">
+                                <rect key="frame" x="134.66666666666666" y="435.66666666666669" width="123.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Traer imagen"/>
+                                <connections>
+                                    <action selector="downloadImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAY-QG-jPD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gXe-vT-csr" firstAttribute="top" secondItem="gfQ-Xw-ELf" secondAttribute="bottom" constant="16" id="6RJ-sd-gbn"/>
                             <constraint firstItem="qgT-t9-PIQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6aL-17-jtG"/>
                             <constraint firstItem="Jjf-BN-FwY" firstAttribute="top" secondItem="w3n-KP-fiM" secondAttribute="bottom" constant="16" id="BOz-sA-sMf"/>
                             <constraint firstItem="w3n-KP-fiM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DHg-6S-en3"/>
+                            <constraint firstItem="54b-rs-L3N" firstAttribute="centerY" secondItem="gXe-vT-csr" secondAttribute="centerY" id="EPs-5y-lYN"/>
                             <constraint firstItem="gfQ-Xw-ELf" firstAttribute="top" secondItem="tgv-p5-n8M" secondAttribute="bottom" constant="16" id="Jla-6d-Bjb"/>
                             <constraint firstItem="bEA-xa-f0T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MfS-qK-Hi0"/>
                             <constraint firstItem="Jjf-BN-FwY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O1l-wp-Raf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jjf-BN-FwY" secondAttribute="trailing" constant="16" id="OTR-pL-d57"/>
                             <constraint firstItem="qgT-t9-PIQ" firstAttribute="top" secondItem="cd7-eE-v8J" secondAttribute="bottom" constant="16" id="SWh-SK-1bT"/>
+                            <constraint firstItem="54b-rs-L3N" firstAttribute="centerX" secondItem="gXe-vT-csr" secondAttribute="centerX" id="TKZ-Pg-Vcv"/>
+                            <constraint firstItem="gXe-vT-csr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TQJ-ld-PWP"/>
                             <constraint firstItem="bEA-xa-f0T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TcV-TK-uvt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qgT-t9-PIQ" secondAttribute="trailing" constant="16" id="W2P-V3-2Pg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cd7-eE-v8J" secondAttribute="trailing" constant="16" id="ZhO-eL-sFe"/>
@@ -91,7 +110,9 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="bEA-xa-f0T" id="lcy-BY-qQr"/>
+                        <outlet property="downloadImageButton" destination="54b-rs-L3N" id="QxR-zV-RvJ"/>
                         <outlet property="idUser" destination="cd7-eE-v8J" id="Rdu-cN-6ZZ"/>
+                        <outlet property="logoImage" destination="gXe-vT-csr" id="o14-tE-tFM"/>
                         <outlet property="nameUser" destination="Jjf-BN-FwY" id="U6D-Aj-6fn"/>
                     </connections>
                 </viewController>
