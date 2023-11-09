@@ -55,6 +55,14 @@
                                     <action selector="updateUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="usg-IY-xIi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfQ-Xw-ELf">
+                                <rect key="frame" x="16" y="302" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DELETE user"/>
+                                <connections>
+                                    <action selector="deleteUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXs-8D-NUc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,6 +70,7 @@
                             <constraint firstItem="qgT-t9-PIQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6aL-17-jtG"/>
                             <constraint firstItem="Jjf-BN-FwY" firstAttribute="top" secondItem="w3n-KP-fiM" secondAttribute="bottom" constant="16" id="BOz-sA-sMf"/>
                             <constraint firstItem="w3n-KP-fiM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DHg-6S-en3"/>
+                            <constraint firstItem="gfQ-Xw-ELf" firstAttribute="top" secondItem="tgv-p5-n8M" secondAttribute="bottom" constant="16" id="Jla-6d-Bjb"/>
                             <constraint firstItem="bEA-xa-f0T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MfS-qK-Hi0"/>
                             <constraint firstItem="Jjf-BN-FwY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O1l-wp-Raf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jjf-BN-FwY" secondAttribute="trailing" constant="16" id="OTR-pL-d57"/>
@@ -70,9 +79,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qgT-t9-PIQ" secondAttribute="trailing" constant="16" id="W2P-V3-2Pg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cd7-eE-v8J" secondAttribute="trailing" constant="16" id="ZhO-eL-sFe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tgv-p5-n8M" secondAttribute="trailing" constant="16" id="afd-mi-Q5u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gfQ-Xw-ELf" secondAttribute="trailing" constant="16" id="eG2-uK-sXU"/>
                             <constraint firstItem="cd7-eE-v8J" firstAttribute="top" secondItem="Jjf-BN-FwY" secondAttribute="bottom" constant="16" id="ivv-2r-Hgb"/>
                             <constraint firstItem="tgv-p5-n8M" firstAttribute="top" secondItem="qgT-t9-PIQ" secondAttribute="bottom" constant="16" id="lhw-uc-bZq"/>
                             <constraint firstItem="w3n-KP-fiM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mV2-La-nL9"/>
+                            <constraint firstItem="gfQ-Xw-ELf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mhy-ET-bkm"/>
                             <constraint firstItem="cd7-eE-v8J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p9k-DU-QG0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w3n-KP-fiM" secondAttribute="trailing" constant="16" id="uV6-BH-6a0"/>
                             <constraint firstItem="tgv-p5-n8M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yBF-er-fvb"/>

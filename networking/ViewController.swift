@@ -63,5 +63,17 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func deleteUser(_ sender: Any) {
+        activityIndicator.startAnimating()
+        
+        NetworkingProvider.shared.deleteUser(id:5704549) {
+            self.activityIndicator.stopAnimating()
+            self.nameUser.text = "Eliminado"
+            self.idUser.text = ""
+        } failure: { error in
+            self.activityIndicator.stopAnimating()
+            self.nameUser.text = error.debugDescription
+        }
+    }
 }
 
